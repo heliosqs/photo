@@ -1,14 +1,12 @@
 package avalith.quevedo.photo.adapter.repository.repinterface;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "albumauth")
 public class AlbumAuthDB {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(name = "albumid")
@@ -22,8 +20,7 @@ public class AlbumAuthDB {
         this.userid = 0;
     }
 
-    public AlbumAuthDB(Integer id, Integer albumid, Integer userid) {
-        this.id = id;
+    public AlbumAuthDB(Integer albumid, Integer userid) {
         this.albumid = albumid;
         this.userid = userid;
     }

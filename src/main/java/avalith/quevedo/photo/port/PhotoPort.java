@@ -5,5 +5,5 @@ import avalith.quevedo.photo.domain.Photo;
 import java.util.List;
 
 public interface PhotoPort {
-    List<Photo> loadAll();
+    List<Photo> loadAll() throws Exception;
 }

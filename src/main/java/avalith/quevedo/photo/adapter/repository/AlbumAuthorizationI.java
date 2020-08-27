@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface AlbumAuthorizationI extends CrudRepository<AlbumAuthDB, Long> {
     List<AlbumAuthDB> findAllByAlbumid(int albumid);
+    boolean existsByAlbumidAndUserid(int albumid, int userid);
 }
